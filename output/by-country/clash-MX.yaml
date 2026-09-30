@@ -4,31 +4,29 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇫🇮 FI 01 - xiaohe
+- name: 🇲🇽 MX 01 - xiaohe
   type: vless
-  server: 2.27.13.61
-  port: 2096
-  uuid: 11d826ce-d6e5-4154-8658-6829bb17dca2
+  server: 34.51.119.243
+  port: 443
+  uuid: 79bc7b01-6e4e-4365-a120-fefac8182bd9
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: st6dbbc.rumedia-cdn.com
-  network: ws
-  ws-opts:
-    path: /cdn/v3/live
-    headers:
-      Host: st6dbbc.rumedia-cdn.com
+  reality-opts:
+    public-key: vFcM44RcbcO5jcrSWHLd_0exXAnnJLhpCNnMrWCwlzI
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇫🇮 FI 01 - xiaohe
+  - 🇲🇽 MX 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇫🇮 FI 01 - xiaohe
+  - 🇲🇽 MX 01 - xiaohe
 rules:
 - MATCH,PROXIES
