@@ -5,30 +5,37 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  type: ss
+  server: 130.49.189.158
+  port: 43558
+  cipher: chacha20-ietf-poly1305
+  password: mhXYDvaSfHzHZXBswC/zo/o8VqdU3XSBpwWx050Y6MU=
+  udp: true
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: vless
-  server: 213.171.31.34
-  port: 5002
-  uuid: 8e8ea5d2-6941-40fb-9efe-f9062b11b2b9
+  server: 62.152.58.90
+  port: 443
+  uuid: 1bb2af63-4472-44ed-9c70-8f316258b68b
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: us.centermass.net
-  network: ws
-  ws-opts:
-    path: media.playback.v1.SessionGateway
-    headers:
-      Host: 213.171.31.34
+  reality-opts:
+    public-key: JBKJlzuJH1YzDHAoz28wEKbzWTGpDpKjgtSq0oT0a0k
+  servername: 360.yandex.ru
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
 rules:
 - MATCH,PROXIES
