@@ -6,32 +6,30 @@ log-level: info
 proxies:
 - name: 🇸🇪 SE 01 - xiaohe
   type: vless
-  server: stsr.hospitaldt.ir
-  port: 8443
-  uuid: 9cdcec15-2c73-40d5-b50f-d00381fddd26
+  server: psf-2.weedly.top
+  port: 80
+  uuid: 33016f3d-8509-493c-bd8b-d26447d48135
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: stsr.hospitaldt.ir
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: stsr.hospitaldt.ir
+      Host: stigmata.ir
 - name: 🇸🇪 SE 02 - xiaohe
   type: vless
-  server: 172.234.97.206
-  port: 8443
-  uuid: 9cdcec15-2c73-40d5-b50f-d00381fddd26
+  server: psf-2.weedly.top
+  port: 80
+  uuid: 33016f3d-8509-493c-bd8b-d26447d48135
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: stsr.hospitaldt.ir
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: 172.234.97.206
+      Host: stigmata.ir
 proxy-groups:
 - name: PROXIES
   type: select
