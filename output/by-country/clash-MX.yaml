@@ -11,17 +11,26 @@ proxies:
   cipher: aes-256-gcm
   password: BWyPPTusFKhGgzKh
   udp: true
+- name: 🇲🇽 MX 02 - xiaohe
+  type: ss
+  server: 147.78.1.234
+  port: 16673
+  cipher: aes-128-gcm
+  password: 67c57ae584eecd70396fcd7ca7521130
+  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇲🇽 MX 01 - xiaohe
+  - 🇲🇽 MX 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇲🇽 MX 01 - xiaohe
+  - 🇲🇽 MX 02 - xiaohe
 rules:
 - MATCH,PROXIES
