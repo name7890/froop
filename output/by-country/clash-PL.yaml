@@ -42,6 +42,14 @@ proxies:
   servername: pl.flen-vpn.xyz
 - name: 🇵🇱 PL 05 - xiaohe
   type: vless
+  server: edge10.cyrionflare.com
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇵🇱 PL 06 - xiaohe
+  type: vless
   server: 38.244.186.167
   port: 8445
   uuid: f3b8d5f8-cbe9-4aca-ab34-005c51262d5e
@@ -52,6 +60,18 @@ proxies:
     public-key: -s2SHiKfXMJRYizNuu8URrx6MgyoQtBJ0QAj33qMog0
   servername: www.samsung.com
   client-fingerprint: firefox
+- name: 🇵🇱 PL 07 - xiaohe
+  type: vless
+  server: 38.244.186.167
+  port: 8445
+  uuid: f3b8d5f8-cbe9-4aca-ab34-005c51262d5e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  reality-opts:
+    public-key: -s2SHiKfXMJRYizNuu8URrx6MgyoQtBJ0QAj33qMog0
+  servername: www.samsung.com
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -62,6 +82,8 @@ proxy-groups:
   - 🇵🇱 PL 03 - xiaohe
   - 🇵🇱 PL 04 - xiaohe
   - 🇵🇱 PL 05 - xiaohe
+  - 🇵🇱 PL 06 - xiaohe
+  - 🇵🇱 PL 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -72,5 +94,7 @@ proxy-groups:
   - 🇵🇱 PL 03 - xiaohe
   - 🇵🇱 PL 04 - xiaohe
   - 🇵🇱 PL 05 - xiaohe
+  - 🇵🇱 PL 06 - xiaohe
+  - 🇵🇱 PL 07 - xiaohe
 rules:
 - MATCH,PROXIES
