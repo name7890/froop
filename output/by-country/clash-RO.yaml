@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇷🇴 RO 01 - xiaohe
   type: vless
-  server: 155.117.5.208
+  server: edge10.cyrionflare.com
   port: 2052
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
@@ -14,7 +14,7 @@ proxies:
   skip-cert-verify: true
 - name: 🇷🇴 RO 02 - xiaohe
   type: vless
-  server: 178.83.45.226
+  server: edge10.cyrionflare.com
   port: 2052
   uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
   udp: true
@@ -29,6 +29,38 @@ proxies:
   tls: false
   skip-cert-verify: true
 - name: 🇷🇴 RO 04 - xiaohe
+  type: vless
+  server: 178.83.45.226
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇷🇴 RO 05 - xiaohe
+  type: vless
+  server: 155.117.5.208
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇷🇴 RO 06 - xiaohe
+  type: vless
+  server: edge10.cyrionflare.com
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇷🇴 RO 07 - xiaohe
+  type: vless
+  server: edge10.cyrionflare.com
+  port: 2052
+  uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286
+  udp: true
+  tls: false
+  skip-cert-verify: true
+- name: 🇷🇴 RO 08 - xiaohe
   type: vless
   server: edge10.cyrionflare.com
   port: 2052
@@ -45,6 +77,10 @@ proxy-groups:
   - 🇷🇴 RO 02 - xiaohe
   - 🇷🇴 RO 03 - xiaohe
   - 🇷🇴 RO 04 - xiaohe
+  - 🇷🇴 RO 05 - xiaohe
+  - 🇷🇴 RO 06 - xiaohe
+  - 🇷🇴 RO 07 - xiaohe
+  - 🇷🇴 RO 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -54,5 +90,9 @@ proxy-groups:
   - 🇷🇴 RO 02 - xiaohe
   - 🇷🇴 RO 03 - xiaohe
   - 🇷🇴 RO 04 - xiaohe
+  - 🇷🇴 RO 05 - xiaohe
+  - 🇷🇴 RO 06 - xiaohe
+  - 🇷🇴 RO 07 - xiaohe
+  - 🇷🇴 RO 08 - xiaohe
 rules:
 - MATCH,PROXIES

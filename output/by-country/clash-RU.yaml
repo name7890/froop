@@ -6,10 +6,10 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: ss
-  server: 159.194.251.76
-  port: 8388
+  server: 130.49.189.158
+  port: 43558
   cipher: chacha20-ietf-poly1305
-  password: MODziWLa9qMuW-4yPa0rfw
+  password: cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI=
   udp: true
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: ss
@@ -19,13 +19,6 @@ proxies:
   password: cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI=
   udp: true
 - name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  type: ss
-  server: 130.49.189.158
-  port: 43558
-  cipher: chacha20-ietf-poly1305
-  password: cZGr8nLHdf+FE5ZAw0Y/Rzsml4AyikGL481Pg7eBpsI=
-  udp: true
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
   type: ss
   server: 195.58.49.167
   port: 18443
@@ -40,7 +33,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -49,6 +41,5 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
 rules:
 - MATCH,PROXIES
