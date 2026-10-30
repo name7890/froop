@@ -6,13 +6,16 @@ log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
   type: vless
-  server: 149.33.15.213
+  server: 186.246.9.29
   port: 443
-  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
+  uuid: b2847c3b-5278-4b06-9c66-bc919d2dfec7
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: swz.proxyplankton.ru
+  reality-opts:
+    public-key: MPNMomAMn_lu9YMYjD2jAQWrI-rTM4hj9Jgg9d6qzTA
+  servername: wordpress.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
