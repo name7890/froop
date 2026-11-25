@@ -27,17 +27,6 @@ proxies:
   udp: true
 - name: 🇦🇹 AT 04 - xiaohe
   type: vmess
-  server: 154.47.19.225
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: 154.47.19.225
-- name: 🇦🇹 AT 05 - xiaohe
-  type: vmess
   server: leviko-at3530.shopingggg.ir
   port: 1270
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
@@ -47,17 +36,6 @@ proxies:
   tls: true
   skip-cert-verify: true
   servername: ''
-- name: 🇦🇹 AT 06 - xiaohe
-  type: vmess
-  server: 154.47.19.225
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xmfhlpy.com
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,8 +45,6 @@ proxy-groups:
   - 🇦🇹 AT 02 - xiaohe
   - 🇦🇹 AT 03 - xiaohe
   - 🇦🇹 AT 04 - xiaohe
-  - 🇦🇹 AT 05 - xiaohe
-  - 🇦🇹 AT 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -78,7 +54,5 @@ proxy-groups:
   - 🇦🇹 AT 02 - xiaohe
   - 🇦🇹 AT 03 - xiaohe
   - 🇦🇹 AT 04 - xiaohe
-  - 🇦🇹 AT 05 - xiaohe
-  - 🇦🇹 AT 06 - xiaohe
 rules:
 - MATCH,PROXIES
