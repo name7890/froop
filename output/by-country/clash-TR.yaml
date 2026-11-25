@@ -6,13 +6,18 @@ log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   type: vless
-  server: 143.246.136.128
-  port: 50738
-  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  server: 45.74.158.105
+  port: 443
+  uuid: 58e22afd-bf74-4736-984d-63a8ca03d7f0
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: turkey-ip1.mmdaqaorg.xyz
+  servername: accessfooter.cleanfoodshop.org
+  network: ws
+  ws-opts:
+    path: /media/ws/
+    headers:
+      Host: accessfooter.cleanfoodshop.org
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   type: vless
   server: 172.64.155.209

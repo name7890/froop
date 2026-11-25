@@ -1,0 +1,34 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇱🇻 LV 01 - xiaohe
+  type: vless
+  server: 77.73.71.200
+  port: 443
+  uuid: 83706ae4-be2f-4b2b-8079-c3eb4e0b2e3e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: lagoon.gerqix.online
+  network: ws
+  ws-opts:
+    path: /api/de5/stream
+    headers:
+      Host: lagoon.gerqix.online
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇱🇻 LV 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇱🇻 LV 01 - xiaohe
+rules:
+- MATCH,PROXIES
