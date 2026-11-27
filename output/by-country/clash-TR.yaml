@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   type: vless
-  server: turkey-ip1.mmdaqaorg.xyz
+  server: 143.246.136.128
   port: 50738
   uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
   udp: true
@@ -14,6 +14,15 @@ proxies:
   skip-cert-verify: true
   servername: turkey-ip1.mmdaqaorg.xyz
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  type: vless
+  server: leviko-tr3795.shopingggg.ir
+  port: 50738
+  uuid: 56665684-5ac0-4ba9-9d49-8b258fb57974
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: turkey-ip1.mmdaqaorg.xyz
+- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
   type: vless
   server: v2new.nimbaha9.ir
   port: 8080
@@ -26,19 +35,6 @@ proxies:
     path: /XDS45
     headers:
       Host: v2new.nimbaha9.ir
-- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  type: vless
-  server: raha.ertebatgoostar.ir
-  port: 80
-  uuid: 8c49bed5-dbb2-4c0d-a2f1-2577b12c6c66
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
 proxy-groups:
 - name: PROXIES
   type: select
